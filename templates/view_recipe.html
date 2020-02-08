@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% block content %}
+<article>
+    <div id="detail-container" class="container">
+        <div class="row col-md-12 mb-5">
+            <div class="recipe-card">
+                <div class="row">
+                    <div class="col-md-6 bg-img">
+                        {% if recipe.image %}
+                        {% if "http" in recipe.image  %}
+                        <img src="{{recipe.image}}" class="img-fluid img-thumbnail img-dish-detail" />
+                        {% else %}
+                        <img src="/static/img/some_recipies/{{recipe.image}}"
+                            class="img-fluid img-thumbnail img-dish-detail    " />
+                        {% endif %}
+                        {% else %}
+                        <img src="/static/img/some_recipies/dumbell.jpg.jpg" class="img-fluid img-thumbnail" />
+                        {% endif %}
+                    </div>
+                    <div class="col-md-6 text-center recipe-info">
+                        <p class="card-text"><strong>Category:</strong> {{recipe.category}}</p>
+                        <p class="card-text"><strong>Cooking Time:</strong> {{recipe.cooking_time}} min</p>
+                        <p class="card-text"><strong>Serves:</strong> {{recipe.serves}}</p>
+                        <p class="card-text"><strong>Author:</strong> {{recipe.user_name}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <h2 class="card-title text-center" style="text-align: center;font-weight: bold;">{{recipe.title}}
+                </h2>
+
+                <p class="card-text"><strong>Ingredients: </strong>
+                    <ul>
+                        {% for ingredient in recipe.ingredients %}
+                        <li>
+                            {{ingredient}}
+                        </li>
+                        {%endfor%}
+                    </ul>
+                </p>
+                <p class="card-text"><strong>Instructions:</strong>
+                    <ul>
+                        {% for instruction in recipe.instructions%}
+                        <li>
+                            {{loop.index}}. {{instruction}}
+                        </li>
+                        {%endfor%}
+                    </ul>
+                </p>
+            </div>
+
+
+            {% if "usename" in session and session ["username"] == recipe.user_name %}
+            <div class="card-footer">
+                <a style="cursor:pointer; float: left;padding: 5px; width: 110px; height: 36px" class="btn btn-success"
+                    onclick="window.location.href='{{ url_for( 'edit_recipe' , recipe_id=recipe._id) }}';">Edit</a>
+                <a href="{{ url_for( 'recipe_details' , recipe=recipe._id,action='delete'  ) }}"
+                    style="cursor:pointer; float: right;padding: 5px;  width: 110px; height: 36px"
+                    class="btn btn-danger delete" title="delete">Delete</a>
+            </div>
+            {%endif%}
+        </div>
+    </div>
+</article>
+
+<script>
+    const deleteButtons = document.querySelectorAll('.delete');
+
+    for (deleteButton of deleteButtons) {
+        deleteButton.addEventListener('click', function (e) {
+            e.preventDefault();
+        })
+    }
+</script>
+
+{% endblock %}
