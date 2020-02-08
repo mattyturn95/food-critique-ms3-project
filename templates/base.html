@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="{{ url_for('static',filename='vendor/bootstrap/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/agency.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css' )}}" type="text/css" />
+    <title>Fitness Pot</title>
+
+<body id="page-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+
+
+            <a class="home-icon d-lg-none" href="{{ url_for('index') }}"> <i class="fas fa-home"></i></a>
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">Fitness Pot
+                <i class="fas fa-chevron-up"></i>
+            </a>
+            <button class="navbar-toggler navbar-toggler-right menu-button" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="{{ url_for('index') }}"><i class="fas fa-home"></i>
+                            Home</a>
+                    </li>
+                    {% if session['logged_in'] == True %}
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="{{ url_for('myrecipies') }}">My Recipies</a>
+                    </li>
+                    {%endif%}
+                    <li>
+                        <a class="nav-link js-scroll-trigger" href="{{ url_for('create_recipe') }}">Add Recipie</a>
+                    </li>
+                    {% if session['logged_in'] == True %}
+                    <li class="nav-item">
+                        <button onclick="document.getElementById('id04').style.display='block'" style="width:auto;"
+                            id="uname_btn">Hi {{session['username']}}!</button>
+                        <a class="nav-link js-scroll-trigger logout-btn" href="{{ url_for('logout') }}">Logout</a>
+                    </li>
+
+                    {% block body %}{% endblock %}
