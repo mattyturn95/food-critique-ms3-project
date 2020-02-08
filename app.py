@@ -34,3 +34,25 @@ mydb = myclient["fitness_pot"]
 dish_col = mydb["dish"]
 users_col = mydb["users"]
 collection_names = mydb.list_collection_names()
+
+DEBUG_LEVEL = "DEBUG"
+
+# =========
+# HOME PAGE - Display home page featured recipes with
+# image and introductory text only
+# =========
+
+
+@app.route("/", methods=["GET", "POST"])
+def index():
+    # this will allow to display 6 recipes per page. function located in
+    # utilities.py file
+    pagination = 6
+    recipes = mydb.dish.find()
+
+    selected_category = "All Recipes"
+
+    if request.args.get("category"):
+        selected_category = (
+            request.args.get("category").capitalize() + " Recipes"
+        )
