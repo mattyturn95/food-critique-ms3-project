@@ -53,3 +53,55 @@
                     </li>
 
                     {% block body %}{% endblock %}
+                    {% else %}
+                    <li>
+                        <button class="register-button"
+                            onclick="document.getElementById('id02').style.display='block'; document.getElementById('id01').style.display='none'"
+                            style="width:auto;" id="login_btn">Login</button>
+                        <button class="register-button"
+                            onclick="document.getElementById('id01').style.display='block'; document.getElementById('id02').style.display='none'"
+                            style="width:auto;" id="signup_btn">Sign Up</button>
+                    </li>
+
+                    {% endif %}
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+
+    {% if should_show_background_image == True %}
+    <header class="masthead"
+        style="background-image: url('https://www.happyfamilyorganics.com/wp-content/uploads/2018/08/126-Strategies-for-creating-a-healthy-kitchen_182307536.jpg')">
+        {% else %}
+        <header class="masthead d-none d-lg-block"
+            style="background-image: url('https://www.happyfamilyorganics.com/wp-content/uploads/2018/08/126-Strategies-for-creating-a-healthy-kitchen_182307536.jpg')">
+
+            {% endif %}
+
+
+            <div class="header-container">
+                <div class="intro-text">
+                    <div class="intro-lead-inn d-none d-md-block">Welcome To Our Fitness Kitchen!<br> We are here to
+                        help you find healthy dishes that don’t
+                        sacrifice any of the flavor that can be found in their full-fat origins.<br> People may think
+                        eating healthy is boring but
+                        that’s furthest from the truth.<br>You can still enjoy delicious tasting meals with healthier
+                        alternatives.<br>Enjoy</div>
+
+
+                </div>
+            </div>
+        </header>
+
+        <p class="login-flash">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            {% for message in messages %}
+            {{message}}
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+        </p>
