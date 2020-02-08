@@ -231,4 +231,39 @@
         <script src="{{ url_for('static', filename='vendor/jquery-easing/jquery.easing.min.js') }}"></script>
 
         <!-- Custom scripts for this template -->
- 
+        <script src="{{ url_for('static', filename='js/agency.min.js') }}"></script>
+        <script>
+            const modal = document.getElementById('id01');
+            const login_modal = document.getElementById('id02');
+
+            /*function written to close pop up window outside the modal or on X "close button"*/
+
+            window.addEventListener('click', function (event) {
+                const login_btn = document.querySelector('#login_btn');
+                const signup_btn = document.querySelector('#signup_btn');
+
+                if (event.target != modal && event.target != signup_btn) {
+                    if (modal.contains(event.target) == false) {
+                        modal.style.display = "none";
+                    }
+                }
+
+                if (event.target != login_modal && event.target != login_btn) {
+                    if (login_modal.contains(event.target) == false) {
+
+                    }
+                }
+            });
+
+            const close_login = document.querySelector('#close_login');
+            close_login.addEventListener('click', function () {
+                login_modal.style.display = "none";
+            });
+
+            const close_signup = document.querySelector('#close_signup');
+            close_signup.addEventListener('click', function () {
+                modal.style.display = "none";
+            });
+        </script>
+
+</body>
