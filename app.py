@@ -56,3 +56,48 @@ def index():
         selected_category = (
             request.args.get("category").capitalize() + " Recipes"
         )
+          if request.args.get("category"):
+        recipes = mydb.dish.find({"category": request.args.get("category")})
+
+    recipes, page, next = paginate(
+        recipes, pagination, request.args.get("page")
+    )
+    return render_template(
+        "index.html",
+        page=page,
+        recipes=recipes,
+        next=next,
+        categories=get_all_categories_from_db(),
+        selected_category=selected_category,
+        should_show_background_image=True,
+    )
+
+
+# =================================
+# CREATEUSER MODAL- function will allow create new account
+# ==================================
+@app.route("/create_user", methods=["POST"])
+def createuser():
+    regex = "^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"  # noqa: W605
+    if not re.search(regex, request.form.get("email")):
+        flash("invalid email")
+        return redirect(url_for("index"))
+
+    newuser = {
+        "username": request.form.get("username"),
+        "password": request.form.get("password"),
+        "email": request.form.get("email"),
+    }
+    user = mydb.users.find_one({"username": request.form["username"]})
+    if user:
+        flash("Username already exists")
+    else:
+
+        try:
+            users_col.insert_one(newuser)
+            flash(
+                "Congratulation "
+                + request.form.get("username")
+                + "! You have created account"
+            )
+        # try and except to notify user in case there was some troubleshooting
