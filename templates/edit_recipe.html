@@ -43,3 +43,59 @@
                         {% endif %}
                         {% endfor %}
                     </select>
+                </div>
+                <div class="col-md-6 input-field col s6">
+                    <input name="cooking_time" id="cooking_time" type="number" class="validate" min="1" max="180"
+                        required>
+                    <label for="cooking_time">Cooking Time In Minutes</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s6">
+                    <input value="{{recipe.title}}" name="title" id="title" type="text" class="validate">
+                    <label for="title">Name Dish</label>
+                </div>
+                <div class="input-field col s6">
+                    <input value="{{recipe.serves}}" name="serves" id="serves" min="1" max="12" type="number"
+                        class="validate">
+                    <label for="serves">How Many Serves</label>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea name="image_url" id="image_url" class="materialize-textarea"
+                        data-length="500">{{recipe.image}}</textarea>
+                    <label for="image_url">Paste Your Image URL here</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea name="ingredients" id="ingredients" class="materialize-textarea" data-length="700"
+                        required>{{recipe.parsed_ingredients}}</textarea>
+                    <label for="ingredients">Ingredients (one per line)</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea name="instructions" id="instructions" class="materialize-textarea"
+                        data-length="500">{{recipe.parsed_instructions}}</textarea>
+                    <label for="instructions">Instructions (one per line)</label>
+                </div>
+            </div>
+            {% if session["username"] %}
+            <button class="btn waves-effect waves-light uptade-recipe-btn" type="submit"
+                name="action">{{button_text}}</button>
+            {% endif %}
+        </form>
+    </div>
+
+    {% endif %}
+
+
+
+
+    {% endblock %}
