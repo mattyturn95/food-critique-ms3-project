@@ -2,23 +2,99 @@
 {% block content %}
 
 
-    
-    
-    <h1 class = "recipe-header">Add Recipe</h1>
-    {% if message %}
-     <h3 class= "all_fields_message">{{message}}</h3>
-     {%endif%}
 
-    <div class= "row m-0 p-2 mt-3 mb-4">
-    <div class= "offset-2 col-8 email-form">
-        <div class= "row no-gutters">
-         {% if not session.get('logged_in') %}
+
+<h1 class="recipe-header">Add Recipe</h1>
+{% if message %}
+<h3 class="all_fields_message">{{message}}</h3>
+{%endif%}
+
+<div class="row m-0 p-2 mt-3 mb-4">
+    <div class="offset-2 col-8 email-form">
+        <div class="row no-gutters">
+            {% if not session.get('logged_in') %}
             <div class="col-12">
                 <p class="user-msg">Please Login to add recipe</p>
             </div>
 
             <!--in line style to direct user to modal pop up when trying to add recipe without login -->
             <style>
-                #id02{display: block;}
+                #id02 {
+                    display: block;
+                }
             </style>
             <!----------------------------------------------------------------------------------------------->
+            {% endif %}
+        </div>
+
+    </div>
+</div>
+{% if session.get('logged_in') %}
+
+<div class="row add-recipe-form">
+
+    <form class="col s12" action="{{ url_for('create_recipe')}}" method="POST">
+
+        <div class="row">
+            <div class="select-field col s6">
+                <select id="category" name="category" class="form-control choose-category" required>
+                    <option disabled="" selected="" value="">Choose Category</option>
+                    {% for category in categories %}
+                    <option value="{{category}}">{{category}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="col-md-6 input-field col s6">
+                <input name="cooking_time" id="cooking_time" type="number" class="validate" min="1" max="180" required>
+                <label for="cooking_time">Cooking Time In Minutes</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6">
+                <input name="title" id="title" type="text" class="validate" required>
+                <label for="title">Name Dish</label>
+            </div>
+            <div class="input-field col s6">
+                <input name="serves" id="serves" type="number" class="validate" min="1" max="12" required>
+                <label for="serves">How Many Serves</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12">
+                <textarea name="description" id="description" type="text" class="materialize-textarea" data-length="400"
+                    required></textarea>
+                <label for="description">Short Description 400 char max</label>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="input-field col s12">
+                <input name="image_url" id="image_url" type="url" class="validate" required>
+
+                <label for="image_url">Paste Your Image URL here</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <textarea name="ingredients" id="ingredients" class="materialize-textarea" data-length="700"
+                    required></textarea>
+                <label for="ingredients">Ingredients (one per line)</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12">
+                <textarea name="instructions" id="instructions" class="materialize-textarea"
+                    data-length="500"></textarea>
+                <label for="instructions">Instructions (one per line)</label>
+            </div>
+        </div>
+        {% if session["username"] %}
+        <button class="btn waves-effect waves-light action-button" type="submit" name="action">Add new recipe</button>
+        {% endif %}
+    </form>
+</div>
+
+{% endif %}
