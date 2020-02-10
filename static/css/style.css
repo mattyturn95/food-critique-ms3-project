@@ -1,58 +1,57 @@
-body{
+body {
     background-color: #d7ead7b5;
 }
 
-
-*{
+* {
     box-sizing: border-box;
 }
 
-
 /*--------------------------------------------------------NAVBAR--------------------------------------------------------------------*/
 
-#mainNav .navbar-toggler{
-background-color: #4fa955;
+#mainNav .navbar-toggler {
+    background-color: #4fa955;
 }
 
-#mainNav .navbar-brand{
+#mainNav .navbar-brand {
     position: relative;
     top: -10px;
     font-size: 25px;
-    }
-#mainNav .navbar-brand :hover{
-    color:#76c180
 }
 
-.nav-link{
+#mainNav .navbar-brand :hover {
+    color: #76c180
+}
+
+.nav-link {
     padding: 5px .5rem !important;
     background-color: #c0e0c0
 }
 
-.nav-link:hover{
-    background-color: rgba(0,0,0,0.1);   
+.nav-link:hover {
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
-.navbar-dark .navbar-nav .nav-link{
+.navbar-dark .navbar-nav .nav-link {
     color: #097d17;
     font-size: 90%;
     font-weight: 500;
     letter-spacing: 1px;
 }
 
-nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons{
+nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons {
     height: auto;
 }
 
-.menu-button{
+.menu-button {
     position: relative;
     top: -11px;
 }
 
-.text-muted1{
-    color:#ffffffbd;
+.text-muted1 {
+    color: #ffffffbd;
 }
 
-.intro-lead-inn{
+.intro-lead-inn {
     color: #ffffff;
     position: relative;
     top: -20px;
@@ -63,123 +62,130 @@ nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons{
     opacity: 0.7;
 }
 
-.home-icon{
+.home-icon {
     color: #4a9c51;
 }
+
 /*-------------------------------------------------------------------------------------------------------------*/
+
 /*prevoius and next buttons for pagination main page*/
-.next{
+
+.next {
     position: relative;
     left: 230px;
 }
 
-.previous{
+.previous {
     position: relative;
     right: -200px;
 }
 
 /* ---------------------img card body styiling------------------------*/
-.card-body-details{
+
+.card-body-details {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    }
+}
 
-.card-body{
+.card-body {
     width: 100%;
-
 }
 
 /*RECIPE DETAILS CONTAINER*/
-.card-footer1{
+
+.card-footer1 {
     background-color: #e2f0e2;
 }
-.details-button{
+
+.details-button {
     background-color: #4caf50;
     color: #ffffff;
 }
-.details-button:hover{
+
+.details-button:hover {
     background-color: #295d2b
-        
-    
 }
+
 /*---------------------------------------------------------------------------------------------------*/
 
-
-header.masthead{
-height: 550px;
+header.masthead {
+    height: 550px;
 }
 
 header.masthead .intro-text {
-    padding-top:150px; 
+    padding-top: 150px;
     position: relative;
     top: 40px;
-    
 }
-
-
-
 
 /*---------------------------RECIPE---------------------------------------------*/
 
-
-.add-recipe-form{
+.add-recipe-form {
     background-color: #ffffff;
     border-radius: 1.25rem;
 }
 
 /* add recipies form css styled */
-   label color
-   .input-field label {
-     color: #000;
-   }
 
-   /* label focus color */
-   .input-field input[type=text]:focus + label {
-     color: #000;
-   }
+label color .input-field label {
+    color: #000;
+}
 
-   /* label underline focus color */
-   .input-field input[type=text]:focus {
-     border-bottom: 1px solid #000;
-     box-shadow: 0 1px 0 0 #000;
-   }
+/* label focus color */
 
-   /* valid color */
-   .input-field input[type=text].valid {
-     border-bottom: 1px solid #000;
-     box-shadow: 0 1px 0 0 #000;
-   }
+.input-field input[type=text]:focus+label {
+    color: #000;
+}
 
-   /* invalid color */
-   .input-field input[type=text].invalid {
-     border-bottom: 1px solid #000;
-     box-shadow: 0 1px 0 0 #000;
-   }
-   
-   /* icon prefix focus color */
-   .input-field .prefix.active {
-     color: #000;
-   }
+/* label underline focus color */
 
-   /* Full-width input fields */
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+}
+
+/* valid color */
+
+.input-field input[type=text].valid {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+}
+
+/* invalid color */
+
+.input-field input[type=text].invalid {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+}
+
+/* icon prefix focus color */
+
+.input-field .prefix.active {
+    color: #000;
+}
+
+/* Full-width input fields */
+
 input[type=text], input[type=password] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
-  border: none;
-  background: #f1f1f1;
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
 }
 
 /* Add a background color when the inputs get focus */
+
 input[type=text]:focus, input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
+    background-color: #ddd;
+    outline: none;
 }
 
 /* ---------------------buttons------------------------- */
-.uptade-recipe-btn{
+
+.uptade-recipe-btn {
     display: inline-block;
     font-weight: 400;
     color: #212529;
@@ -194,50 +200,46 @@ input[type=text]:focus, input[type=password]:focus {
     font-size: 1rem;
     line-height: 1.5;
     border-radius: .25rem;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
-.uptade-recipe-btn:hover{
+.uptade-recipe-btn:hover {
     background-color: #c0e0c0;
 }
 
-
-
 button {
-  background-color: #4CAF50;
-  color: #ffffff;
-  padding: 1px 30px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  opacity: 0.9;
-  margin-right: -4px;
-
+    background-color: #4CAF50;
+    color: #ffffff;
+    padding: 1px 30px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    opacity: 0.9;
+    margin-right: -4px;
 }
 
-.action-button{
+.action-button {
     background-color: #48a14c;
 }
 
-.action-button:hover{
+.action-button:hover {
     background-color: #c0e0c0;
 }
 
 button:hover {
-  background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
- .cancelbtn {
-  padding: 14px 20px;
-  background-color: #f44336;
-} 
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+}
 
-
-.img-dish-detail{
+.img-dish-detail {
     max-width: 60%;
 }
 
-.card-description{
+.card-description {
     -webkit-box-orient: vertical;
     display: -webkit-box;
     -webkit-line-clamp: 7;
@@ -246,96 +248,100 @@ button:hover {
     line-height: 1.15;
 }
 
-.card-img-top{
-    width: 100% ;
-    }
+.card-img-top {
+    width: 100%;
+}
 
-                    /*----------------MODAL BUTTONS----------------------*/
+/*----------------MODAL BUTTONS----------------------*/
 
-.logout-btn{
-    display:inline-block;
+.logout-btn {
+    display: inline-block;
     height: 68px;
 }
 
- .login-btn{
+.login-btn {
     padding: 14px 20px;
- }
-
- .cancelbtn, .signupbtn {
-    float: left;
-    
 }
 
-.signupbtn{
+.cancelbtn, .signupbtn {
+    float: left;
+}
+
+.signupbtn {
     padding: 14px 20px;
     margin-left: 15px;
 }
 
-.recipe-header{
+.recipe-header {
     text-align: center;
     padding-top: 25px;
     padding-bottom: 25px;
 }
 
 /*-----------------------------------------SELECT CATEGORY BUTTON HOME PAGE-----------------------------------*/
-.select-category{
+
+.select-category {
     position: relative;
     top: 25px;
     background-color: #5bb65f;
     left: 50%;
 }
 
-.select-category:hover{
+.select-category:hover {
     background-color: #295d2b
 }
 
-
 /*-------------------------------------------------------------------------------------------------------*/
 
-
-
 /* The Modal (background) */
+
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 9999; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: #474e5d;
-  padding-top: 50px;
-} 
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 9999;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: #474e5d;
+    padding-top: 50px;
+}
 
 /* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and cente#ff0000 */
-  border: 1px solid #888;
-  width: 80%; /*Could be more or less, depending on screen size*/
-} 
 
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    /* 5% from the top, 15% from the bottom and cente#ff0000 */
+    border: 1px solid #888;
+    width: 80%;
+    /*Could be more or less, depending on screen size*/
+}
 
 /* Style the horizontal ruler */
-hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
-}
- 
 
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
 
 /* Clear floats */
+
 .clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
+    content: "";
+    clear: both;
+    display: table;
 }
 
-
-
-
 /*LOGIN FLASH IN NAVBAR*/
+
 .login-flash {
     padding-top: 40px;
     color: #ff0000;
@@ -346,229 +352,204 @@ hr {
 
 /* Change styles for cancel button and signup button on extra small screens */
 
-  .footer {
+.footer {
     padding: 5px 0px;
     text-align: center;
     background-color: #c0e0c0
 }
 
-.card-footer{
+.card-footer {
     width: 100%;
 }
-
 
 /*----------------------------MEDIA QUERRY------------------------*/
 
-@media screen and (min-width:325px){
-    
-    .edit-choose-category{
-    display: block;
-    width: 100%;
-    height: calc(1.5em + .75rem + 2px);
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #ffffff;
-    background-color: #48a14c;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: .25rem;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+@media screen and (min-width:325px) {
+    .edit-choose-category {
+        display: block;
+        width: 100%;
+        height: calc(1.5em + .75rem + 2px);
+        padding: .375rem .75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #ffffff;
+        background-color: #48a14c;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: .25rem;
+        transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
     }
-
-.browse-category {
-    position: relative;
-    top: 5px;
-}
-
-.scrool-down{
-    color: #ffffff;
-    background-color: #5bb65f;
-    position: relative;
-    top: -20px;
-    left: 25%;
-    border-radius: .25rem;
-}
-    
-       
-    .modal-content{
+    .browse-category {
+        position: relative;
+        top: 5px;
+    }
+    .scrool-down {
+        color: #ffffff;
+        background-color: #5bb65f;
+        position: relative;
+        top: -20px;
+        left: 25%;
+        border-radius: .25rem;
+    }
+    .modal-content {
         padding-top: 200px;
-            }
-    header.masthead{
+    }
+    header.masthead {
         height: 380px;
-}
+    }
     .recipe-header {
-    text-align: center;
-    padding-top: 70px;
-    padding-bottom: 25px;
-}
+        text-align: center;
+        padding-top: 70px;
+        padding-bottom: 25px;
+    }
     .choose-category {
-    background-color: #5aaa5d;
-    width: 40%;
-}
-
-.register-button {
-    background-color: #1e6b1e;
-    margin-right: -4px
-}
-
-
-.user-msg {
-    color: #ff0000;
-    text-align: center;
-    font-size: 20px;
-    position: relative;
-    top: 370px;
+        background-color: #5aaa5d;
+        width: 40%;
     }
-
-.select-category {
-    position: relative;
-    top: -37px;
-    background-color: #5bb65f;
-    left: 50%;
-}
-}
-
-@media screen and (min-width: 576px){
-    
-    .edit-choose-category{
-    display: block;
-    width: 50%;
-    height: calc(1.5em + .75rem + 2px);
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #ffffff;
-    background-color: #48a14c;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: .25rem;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    .register-button {
+        background-color: #1e6b1e;
+        margin-right: -4px
     }
-
- .scrool-down{   
-    color: #ffffff;
-    background-color: #5bb65f;
-    position: relative;
-    top: -20px;
-    left: 37%;
-    border-radius: .25rem;
- }
-
-    .recipe-info{
-    position: relative;
-    top: 10px;
+    .user-msg {
+        color: #ff0000;
+        text-align: center;
+        font-size: 20px;
+        position: relative;
+        top: 370px;
     }
-
-.user-msg {
-    color: #ff0000;
-    text-align: center;
-    font-size: 20px;
-    position: relative;
-    top: 480px;
-}
-
-}
-
-@media screen and (min-width: 768px){
-
-.user-msg {
-    color: #ff0000;
-    text-align: center;
-    font-size: 20px;
-    position: relative;
-    top: 600px;
+    .select-category {
+        position: relative;
+        top: -37px;
+        background-color: #5bb65f;
+        left: 50%;
     }
-
-.recipe-info{
-    position: relative;
-    top: 50px;
-    right: 50px;
-   } 
-.recipe-img {
-    position: relative;
-    top: 0px;
-    left: 0px;
-}
-.choose-category{
-    background-color: #5aaa5d;
-    width: 40%;
 }
 
-header.masthead{
-    height: 550px;;
-}
-.card-index {
-    position: relative;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: #ffffff;
-    background-clip: border-box;
-    border: 1px solid rgba(0,0,0,.125);
-    border-radius: .25rem;
-
-}
-
-@media screen and (min-width: 992px){
-.recipe-info{
-    position: relative;
-    top: 100px;
-}
-.recipe-img {
-    margin-top: 25px;
-    max-height: 420px;
-}
-
-.card-index{
-    height: 800px;
-    position: relative;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: #fff;
-    background-clip: border-box;
-    border: 1px solid rgba(0,0,0,.125);
-    border-radius: .25rem;
-}
-
-.browse-category{
-    position: relative;
-    top: 70px;
-}
-.register-button{
-    background-color: #1e6b1e;
-    margin-right: -4px;   
-}
-
-.register-button :hover{
-    background-color: rgba(0,0,0,0.1);
-}
-
-.user-msg {
-    color: #ff0000;
-    text-align: center;
-    font-size: 20px;
-    position: relative;
-    top: 20px;
+@media screen and (min-width: 576px) {
+    .edit-choose-category {
+        display: block;
+        width: 50%;
+        height: calc(1.5em + .75rem + 2px);
+        padding: .375rem .75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #ffffff;
+        background-color: #48a14c;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: .25rem;
+        transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
     }
-
-.select-category{
-    position: relative;
-    top: 25px;
-    background-color: #5bb65f;
-    left: 50%;
+    .scrool-down {
+        color: #ffffff;
+        background-color: #5bb65f;
+        position: relative;
+        top: -20px;
+        left: 37%;
+        border-radius: .25rem;
+    }
+    .recipe-info {
+        position: relative;
+        top: 10px;
+    }
+    .user-msg {
+        color: #ff0000;
+        text-align: center;
+        font-size: 20px;
+        position: relative;
+        top: 480px;
+    }
 }
 
-.select-category:hover{
-    background-color: #295d2b;
-}
-}
+@media screen and (min-width: 768px) {
+    .user-msg {
+        color: #ff0000;
+        text-align: center;
+        font-size: 20px;
+        position: relative;
+        top: 600px;
+    }
+    .recipe-info {
+        position: relative;
+        top: 50px;
+        right: 50px;
+    }
+    .recipe-img {
+        position: relative;
+        top: 0px;
+        left: 0px;
+    }
+    .choose-category {
+        background-color: #5aaa5d;
+        width: 40%;
+    }
+    header.masthead {
+        height: 550px;
+        ;
+    }
+    .card-index {
+        position: relative;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #ffffff;
+        background-clip: border-box;
+        border: 1px solid rgba(0, 0, 0, .125);
+        border-radius: .25rem;
+    }
+    @media screen and (min-width: 992px) {
+        .recipe-info {
+            position: relative;
+            top: 100px;
+        }
+        .recipe-img {
+            margin-top: 25px;
+            max-height: 420px;
+        }
+        .card-index {
+            height: 800px;
+            position: relative;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            min-width: 0;
+            word-wrap: break-word;
+            background-color: #fff;
+            background-clip: border-box;
+            border: 1px solid rgba(0, 0, 0, .125);
+            border-radius: .25rem;
+        }
+        .browse-category {
+            position: relative;
+            top: 70px;
+        }
+        .register-button {
+            background-color: #1e6b1e;
+            margin-right: -4px;
+        }
+        .register-button :hover {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+        .user-msg {
+            color: #ff0000;
+            text-align: center;
+            font-size: 20px;
+            position: relative;
+            top: 20px;
+        }
+        .select-category {
+            position: relative;
+            top: 25px;
+            background-color: #5bb65f;
+            left: 50%;
+        }
+        .select-category:hover {
+            background-color: #295d2b;
+        }
+    }
